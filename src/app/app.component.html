@@ -11,6 +11,8 @@
 
 <button class="btn-primary" (click)="addItem(newItem.value)">Add</button>
 
+<div><button class="btn-primary" (click)="deleteItem()">Delete</button></div>
+
 
   <ul>
     <li *ngFor="let item of items">{{item.description}}</li>

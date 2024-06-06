@@ -23,20 +23,28 @@ filler:"all" | " active"| "done" = "all";
   get items() {
     if (this.filler === "all") {
       return this.allItems;
+      
     }
     return this.allItems.filter((item) =>
-      this.filler === "done" ? item.done : !item.done
+      
+      this.filler === "done" ? console.log(item.done) : !item.done
+    
     );
+    
   }
   addItem(description: string) {
   if (!description) return;
-
-  this.allItems.unshift({
+  console.log(description)
+ this.allItems.unshift({
     description,
     done: false
+    
   });
+  
   
 
 }
-
+// deleteItem(todo:number){
+//   this.allItems.splice(todo)
+// }
 }
